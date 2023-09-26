@@ -12,7 +12,6 @@
     },
     methods: {
       openConfirm (id) {
-        console.log(id)
         this.currentTaskID = id;
         this.show = true;
       },
@@ -21,20 +20,14 @@
         this.show = false 
       },
       getTask() {
-        console.log(this.currentTaskID)
         let task = this.tasks.find(el=>el.id === this.currentTaskID);
         return task;
       },
       SaveFunc(task, priority, deadline, state) {
-        console.log(task, priority, deadline);
         if(!task) return;
         const newTasks = [...this.tasks];
-        console.log("!!!!!", state)
         newTasks.push({id:++this.i, task, priority, deadline, state});
-        console.log("@@@@@@@@@", newTasks)
-
         this.tasks = newTasks
-        console.log(this.tasks, )
       },
 
       updateTask(id, task, priority, deadline, state){

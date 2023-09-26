@@ -36,7 +36,6 @@ import { Icon } from '@iconify/vue';
         getMatchingTasks() {
             return this.tasks.filter(task => {
                 if(task.state === this.type){
-                    console.log(this.LowPriorityFilter)
                     if(!this.LowPriorityFilter && !this.MediumPriorityFilter && !this.HighPriorityFilter) return true;
                     if(this.LowPriorityFilter && task.priority == "Low") return true; 
                     if(this.HighPriorityFilter && task.priority == "High") return true; 
@@ -45,12 +44,10 @@ import { Icon } from '@iconify/vue';
             })
         },
         onDrop (event, state) {
-            console.log(this.tasks)
             const id = event.dataTransfer.getData('id')
             this.tasks.forEach(el => {
                 if(el.id == id)el.state = state
             });
-            console.log(this.tasks)
             
         },
         startDrag (event, item){

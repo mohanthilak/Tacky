@@ -69,7 +69,6 @@
             }
           },
           SaveFunc() {
-            console.log(this.taskName, this.taskPriority, this.taskDeadLine, this.state)
             if(this.task){
               this.updateTask(this.task.id, this.taskName, this.taskPriority, this.taskDeadLine, this.state)
             }else{
@@ -78,7 +77,6 @@
             this.closeFunc()
           },
           pageLoadFunc() {
-            console.log(this.task, this.taskName)
           }
         },
         data() {
