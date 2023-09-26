@@ -24,7 +24,7 @@
         return task;
       },
       SaveFunc(task, priority, deadline, state) {
-        if(!task) return;
+        if(!task && !state) return;
         const newTasks = [...this.tasks];
         newTasks.push({id:++this.i, task, priority, deadline, state});
         this.tasks = newTasks
@@ -123,7 +123,7 @@
       </div>
       <div>
         <input type="checkbox" v-model="LowPriorityFilter" name="" id="Low">  
-        <label for="Low">Low {{ LowPriorityFilter }}</label>
+        <label for="Low">Low</label>
       </div>
     </div>
     <Modal v-if="show" :closeFunc="closeConfirm" :deleteTask="deleteTask" :updateTask="updateTask" :saveFunc="SaveFunc" :task="getTask()"></Modal>
