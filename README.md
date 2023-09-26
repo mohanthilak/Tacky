@@ -1,5 +1,5 @@
 # About
-A simple lightweight task tracking application inspired by Notion's UI. Uses local storage to store persist data.
+A simple lightweight task-tracking application inspired by Notion's UI. Uses local storage to store persistent data.
 
 ## For Local Setup
 
@@ -16,7 +16,7 @@ Move into the directory
 cd Tacky
 ```
 
-Intall all the dependencies.
+Install all the dependencies.
 ```bash
 npm i
 ```
