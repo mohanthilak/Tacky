@@ -2,6 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <h1 class="navbar-brand">{{ brandName }}</h1>
       <p class="navbar-text">{{ tagLine }} <span class="navbar-subtag">{{ tagLine2 }}</span></p>
+      <p>Just DRAG & DROP tasks to switch between stages of progress. </p>
     </nav>
 </template>
   
