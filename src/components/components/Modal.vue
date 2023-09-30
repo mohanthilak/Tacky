@@ -27,11 +27,11 @@
             <label for="Priority">State</label>
           </div>
           <select v-model="state" placeholder="" id="">
-            <option value=""></option>
-            <option value="Ideation">Ideation</option>
+            <option v-for="s in statuses" :value="s.name">{{ s.name }}</option>
+            <!-- <option value="Ideation">Ideation</option>
             <option value="Next Up">Next up</option>
             <option value="In Progress">In Progress</option>
-            <option value="Completed">Completed</option>
+            <option value="Completed">Completed</option> -->
           </select>
         </div>
         <div class="input-type">
@@ -57,6 +57,7 @@
             saveFunc: Function,
             updateTask: Function,
             deleteTask: Function,
+            statuses: Array,
         },
         mounted() {
           this.pageLoadFunc()
